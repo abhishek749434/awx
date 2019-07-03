@@ -15,3 +15,4 @@
       script: /home/abhkm/ver.py
       args:
         executable: python3
+        remote_src: yes
