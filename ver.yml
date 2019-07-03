@@ -12,6 +12,11 @@
 
     - debug: var=requests_version.stdout
 
+    - name: Run a script only if file.txt does not exist on the remote node
+      script: /x/home/abhkm/ver/verCheck.py
+      args:
+         creates: /home/abhkm/verCheck.py
+
     - name: Run a script using an executable in a system path
       script: /home/abhkm/ver.py
       args:
