@@ -13,10 +13,9 @@
     - debug: var=requests_version.stdout
 
     - name: Run a script only if file.txt does not exist on the remote node
-      copy: src=/x/home/abhkm/ver/verCheck.py
-            dest= /home/abhkm/ver.py
-            remote_src=no
-            mode=preserve
+      script: /Users/abhkm/ansible/verCheck.py
+      args:
+        creates: /Users/abhkm/ansible/ver.yml
     - name: Run a script using an executable in a system path
       script: /home/abhkm/ver.py
       args:
