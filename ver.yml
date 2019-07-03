@@ -12,12 +12,6 @@
 
     - debug: var=requests_version.stdout
 
-    - name: Run a script only if file.txt does not exist on the remote node
-      script: /x/home/abhkm/ver/verCheck.py
-      args:
-        creates: /x/home/abhkm/ver/verCheck.py
-        executable: python3
-
     - name: Run a script using an executable in a system path
       script: /Users/abhkm/ansible/verCheck.py
       args:
