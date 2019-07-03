@@ -17,8 +17,9 @@
 
     - debug: var=requests_files.stdout
 
-    - easy_install:
-        name: pip
-        state: latest
-    
+    - name: install pip3
+      shell: apt install python3-pip
+      register: requests_pip
+
+    - debug: var=requests_pip.stdout
    
