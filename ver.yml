@@ -1,6 +1,7 @@
 ---
 
-- gather_facts: yes
+- hosts: all
+  gather_facts: yes
   sudo: yes
 
   tasks:
