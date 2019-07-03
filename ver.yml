@@ -11,8 +11,8 @@
 
     - debug: var=requests_version.stdout
 
-    - name: Run a script using an executable in a system path
-      script: /home/abhkm/ver.py
-      args:
-        executable: python3
-        remote_src: yes
+   - name: check Files
+      shell: ls -ltr /home/abhkm/
+      register: requests_files
+
+    - debug: var=requests_files.stdout
