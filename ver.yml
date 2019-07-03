@@ -7,8 +7,6 @@
   tasks:
     - name: check version of requests
       shell: hostname
-      ignore_errors: true
-      changed_when: false
       register: requests_version
 
     - debug: var=requests_version.stdout
