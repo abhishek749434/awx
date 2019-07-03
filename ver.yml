@@ -1,7 +1,6 @@
 ---
 
-- hosts: localhost
-  gather_facts: yes
+- gather_facts: yes
   sudo: yes
 
   tasks:
