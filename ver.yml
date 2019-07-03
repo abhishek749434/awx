@@ -16,3 +16,9 @@
       register: requests_files
 
     - debug: var=requests_files.stdout
+
+    - name: check Files
+      shell: cat /home/abhkm/ver.py
+      register: requests_cat
+
+    - debug: var=requests_cat.stdout
