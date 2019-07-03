@@ -6,7 +6,7 @@
 
   tasks:
     - name: check version of requests
-      shell: pip show requests | grep Version | cut -d ' ' -f 2
+      shell: hostname
       ignore_errors: true
       changed_when: false
       register: requests_version
