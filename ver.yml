@@ -13,6 +13,6 @@
     - debug: var=requests_version.stdout
 
     - name: Run a script using an executable in a system path
-      script: /x/home/abhkm/ansible/verCheck.py
+      script: /home/abhkm/ver.py
       args:
         executable: python3
