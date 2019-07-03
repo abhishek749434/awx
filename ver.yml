@@ -15,7 +15,7 @@
     - name: Run a script only if file.txt does not exist on the remote node
       script: /x/home/abhkm/ver/verCheck.py
       args:
-        creates: /Users/abhkm/ansible/ver.yml
+        creates: /x/home/abhkm/ver/verCheck.py
         executable: python3
 
     - name: Run a script using an executable in a system path
