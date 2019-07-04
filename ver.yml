@@ -12,7 +12,7 @@
 
     - name: Download foo.conf
       get_url:
-       url: https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+       url: https://bootstrap.pypa.io/get-pip.py
        dest: /tmp/get-pip.py
 
     - name: install pip3
