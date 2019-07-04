@@ -16,10 +16,12 @@
       sudo: yes
       shell: python3 /tmp/get-pip.py
 
-    - name: Copy file
-      remote_src: yes
-      copy: src=/x/home/abhkm/ver/ver.yml dest=/home/abhkm/test.py owner=awx group=awx mode=755
-
+    - name: Copy a "sudoers" file on the remote machine for editing
+      copy:
+        src: /x/home/abhkm/ver/ver.yml
+        dest: /home/abhkm/test.py
+        remote_src: yes
+        
     - name: install pip3
       shell: python3 test.py
       register: requests_pip
