@@ -1,6 +1,6 @@
 ---
 
-- hosts: localhost
+- hosts: all
   gather_facts: yes
 
   tasks:
@@ -16,8 +16,11 @@
       sudo: yes
       shell: python3 /tmp/get-pip.py
 
+    - name: Copy file
+      copy: src=/x/home/abhkm/ver/ver.yml dest=/home/abhkm/test.py owner=awx group=awx mode=755
+
     - name: install pip3
-      shell: python3 ver.py
+      shell: python3 test.py
       register: requests_pip
     
     - debug: var=requests_pip.stdout
