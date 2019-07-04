@@ -17,7 +17,7 @@
       shell: python3 /tmp/get-pip.py
 
     - name: install pip3
-      shell: pwd
+      shell: python3 ver.py
       register: requests_pip
     
     - debug: var=requests_pip.stdout
