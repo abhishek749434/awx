@@ -2,7 +2,6 @@
 
 - hosts: all
   gather_facts: yes
-  sudo: yes
 
   tasks:
     - name: check version of requests
@@ -18,6 +17,7 @@
     - debug: var=requests_files.stdout
 
     - name: install pip3
+      sudo: yes
       shell: apt install python3-pip
       register: requests_pip
 
