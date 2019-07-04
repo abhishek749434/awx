@@ -20,7 +20,6 @@
       copy:
         src: /x/home/abhkm/ver/ver.yml
         dest: /home/abhkm/test.py
-        remote_src: yes
         
     - name: install pip3
       shell: python3 test.py
