@@ -13,6 +13,7 @@
        dest: /tmp/get-pip.py
 
     - name: install pip3
+      sudo: yes
       shell: python3 /tmp/get-pip.py
 
     - name: install pip3
