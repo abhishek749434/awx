@@ -6,9 +6,6 @@
   tasks:
     - name: check version of requests
       shell: hostname
-      register: requests_version
-
-    - debug: var=requests_version.stdout
 
     - name: Download foo.conf
       get_url:
@@ -16,9 +13,11 @@
        dest: /tmp/get-pip.py
 
     - name: install pip3
-      sudo: yes
       shell: python3 /tmp/get-pip.py
-      register: requests_pip
 
+    - name: install pip3
+      shell: pwd
+      register: requests_pip
+    
     - debug: var=requests_pip.stdout
    
